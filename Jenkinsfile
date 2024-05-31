@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build test') {
             steps {
-                npm install
-                npm init playwright@latest
+                npm i -D @playwright/test
+                npx playwright install
             }
         }
          stage('Run test') {
